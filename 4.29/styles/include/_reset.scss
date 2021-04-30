@@ -18,3 +18,9 @@ a {
 p, ul, li {
     font-family: $alice;
 } 
+
+
+::selection {
+    background-color: $iconHover;
+    color: #fff;
+}
