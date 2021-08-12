@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #1d1d1d;
+  font-family: "Roboto", sans-serif;
+  color: #999;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  border: 1px solid #393939;
+  border-radius: 10px;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid #393939;
+}
+
+.header .logo {
+  padding-left: 10px;
+}
+
+.header .logo img {
+  width: 200px;
+}
+
+.header .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.header .menu ul li {
+  width: 50px;
+  height: 60px;
+  font-size: 18px;
+  border-left: 1px solid #393939;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.header .menu ul li:hover {
+  color: #00b3ff;
+  cursor: pointer;
+}
+
+.main {
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 0 10px;
+}
+
+.main .wrap {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 576px) {
+  .main .wrap {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main .wrap {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.main .wrap .box {
+  border: 1px solid #393939;
+  height: 116px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 576px) {
+  .main .wrap .box {
+    height: 150px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main .wrap .box {
+    height: 180px;
+  }
+}
+
+.main .wrap .box__caption {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.8)));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.8) 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 14px;
+  color: #fff;
+  padding: 8px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main .wrap .box__caption:hover {
+  color: #00b3ff;
+  cursor: pointer;
+}
+
+.main .wrap button {
+  grid-column: 1/-1;
+  background-color: #181818;
+  color: #999;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 0;
+  font-size: 14px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main .wrap button:hover {
+  background-color: #00b3ff;
+  color: white;
+  cursor: pointer;
+}
+
+.main .banner {
+  max-width: 1000px;
+  margin: 1.2rem auto;
+}
+
+.main .animeSwiper {
+  width: 100%;
+  margin: .5rem 0;
+  overflow: hidden;
+}
+
+.main .animeSwiper__title {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .animeSwiper__title i {
+  font-size: 12px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main .animeSwiper__title i:hover {
+  color: #00b3ff;
+  cursor: pointer;
+}
+
+.main .animeSwiper__swiper {
+  margin: 1.2rem 0;
+  height: 300px;
+  width: 1300px;
+}
+/*# sourceMappingURL=style.css.map */

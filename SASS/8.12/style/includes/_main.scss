@@ -1,0 +1,94 @@
+.main {
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 0 10px;
+
+    .wrap {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        @media(min-width: 576px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media(min-width: 1024px){
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .box {
+            border: $border;
+            height: 116px;
+            border-radius: 10px;
+            background-size: cover;
+            background-position: center;
+            @media(min-width: 576px){
+                height: 150px;
+            }
+            @media(min-width: 1024px){
+                height: 180px;
+            }
+            &__caption {
+                width: 100%;
+                height: 100%;
+                background: $gradient;
+                display: flex;
+                align-items: flex-end;
+                font-size: 14px;
+                color: #fff;
+                padding: 8px;
+                transition: .3s;
+                &:hover {
+                    color: $hover;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        button {
+            grid-column: 1/-1;
+            background-color: $footerBG;
+            color: $textGray;
+            border: none;
+            border-radius: 10px;
+            padding: 1rem 0;
+            font-size: 14px;
+            transition: .3s;
+            &:hover {
+                background-color: $hover;
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .banner {
+        max-width: 1000px;
+        margin: 1.2rem auto;
+    }
+
+    .animeSwiper {
+        width: 100%;
+        margin: .5rem 0;
+        overflow: hidden;
+        &__title {
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            i {
+                font-size: 12px;
+                transition: .3s;
+                &:hover {
+                    color: $hover;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__swiper {
+            margin: 1.2rem 0;
+            height: 300px;
+            width: 1300px;
+        }
+    }
+}

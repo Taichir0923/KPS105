@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    background-color: $headerBG;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: $border;
+    .logo {
+        padding-left: 10px;
+        img {
+            width: 200px;
+        }
+    }
+
+    .menu {
+        ul {
+            display: flex;
+            list-style: none;
+            li {
+                width: 50px;
+                height: 60px;
+                font-size: 18px;
+                border-left: $border;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: .3s;
+                &:hover {
+                    color: $hover;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
