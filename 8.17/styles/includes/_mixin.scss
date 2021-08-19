@@ -1,0 +1,14 @@
+@mixin mixTest {
+    background-color: orangered;
+    color: white;
+    border: 5px solid orchid;
+    border-radius: 10px;
+    padding: 1.5rem 3rem;
+    width: max-content;
+}
+
+@mixin flexBetween($justify) {
+    display: flex;
+    align-items: center;
+    justify-content: $justify;
+}

@@ -1,0 +1,12 @@
+@import './includes/variables';
+@import './includes/mixin';
+@import './includes/reset';
+
+.custom {
+    @include mixTest;
+}
+
+.box {
+    width: 100%;
+    @include flexBetween(space-between)
+}
