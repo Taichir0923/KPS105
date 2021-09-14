@@ -435,7 +435,7 @@ let user1 = {
 // let users = [{ner: "Gantulga", nas: 25}, {ner: "Nyamgerel"}]
 
 // Array
-let email = prompt("Haih email oruul");
+// let email = prompt("Haih email oruul");
 let users = [user, user1];
 
 // for(let i = 0; i < users.length; i++){
@@ -457,3 +457,24 @@ let users = [user, user1];
 //         console.log(user[pro])
 //     }
 // }
+
+let bat = {
+    ner: "Bat",
+    tootsoo: [124, 48, 268],
+    tip: [],
+    finalBill: []
+}
+
+for(let i = 0; i < bat.tootsoo.length; i++){
+    let percentage = 0;
+    if(bat.tootsoo[i] <= 50){
+        percentage = .2;
+        bat.tip.push(bat.tootsoo[i] * percentage)
+    } else if(bat.tootsoo[i] > 50 && bat.tootsoo[i] < 200){
+        percentage = .15;
+        bat.tip.push(bat.tootsoo[i] * percentage)
+    } else {
+        percentage = .1;
+        bat.tip.push(bat.tootsoo[i] * percentage)
+    }
+}
