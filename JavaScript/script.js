@@ -417,26 +417,26 @@
 // Array - Data Structure
 // Object
 
-let user = {
-    ner: "Narada",
-    email: "narada@mail.com",
-    mergejil: "Designer"
-}
+// let user = {
+//     ner: "Narada",
+//     email: "narada@mail.com",
+//     mergejil: "Designer"
+// }
 
-user.ner = "Jessica";
-user.utas = 99663322;
+// user.ner = "Jessica";
+// user.utas = 99663322;
 
-let user1 = {
-    ner: "John",
-    email: "john@exapmle.com",
-    mergejil: "Teacher"
-}
+// let user1 = {
+//     ner: "John",
+//     email: "john@exapmle.com",
+//     mergejil: "Teacher"
+// }
 // [{}, {}, {}, {}]
 // let users = [{ner: "Gantulga", nas: 25}, {ner: "Nyamgerel"}]
 
 // Array
 // let email = prompt("Haih email oruul");
-let users = [user, user1];
+// let users = [user, user1];
 
 // for(let i = 0; i < users.length; i++){
     // if(users[i].email === email){
@@ -458,23 +458,155 @@ let users = [user, user1];
 //     }
 // }
 
-let bat = {
-    ner: "Bat",
-    tootsoo: [124, 48, 268],
-    tip: [],
-    finalBill: []
+// let bat = {
+//     ner: "Bat",
+//     tootsoo: [124, 48, 268],
+//     tip: [],
+//     finalBill: []
+// }
+
+// for(let i = 0; i < bat.tootsoo.length; i++){
+//     let percentage = 0;
+//     if(bat.tootsoo[i] <= 50){
+//         percentage = .2;
+//         bat.tip.push(bat.tootsoo[i] * percentage)
+//     } else if(bat.tootsoo[i] > 50 && bat.tootsoo[i] < 200){
+//         percentage = .15;
+//         bat.tip.push(bat.tootsoo[i] * percentage)
+//     } else {
+//         percentage = .1;
+//         bat.tip.push(bat.tootsoo[i] * percentage)
+//     }
+// }
+
+// Primitive Data type
+// 1. String
+// 2. Number
+// 3. Boolean
+// 4. undefined
+// 5. null
+
+// Object, Array - Non-Primitive
+
+// Function - Функц гэдэг нь аливаа программийг бүрдүүлж, бүрэлдэхүүн хэсэг. 
+
+// function myFunction(){
+//     let tursunOn = 2000;
+//     let nas = 2021 - tursunOn;
+
+//     return nas;
+// }
+
+// let x = myFunction();
+
+// Parameter function
+
+// function nasTootsoh(on){
+//     return 2021 - on;
+// }
+
+// let person1 = nasTootsoh(2000);
+// let person2 = nasTootsoh(2001);
+// let person3 = nasTootsoh(1997);
+// let person4 = nasTootsoh(1995);
+
+// Оролт - 1, 0, 5; Гаралт: 1
+// Оролт - 5, 3, 1; Гаралт: 0
+
+// 1. 3 ширхэг тоо аргумент хэлбэрээр авдаг функц бич.
+// 2. Тоологч хувьсагч үүсгэ.
+// 3. Эхний тоог тэгтэй тэнцүү эсэхийг шалгаад, хэрэв тэгтэй тэнцүү бол тоолуурын утгыг нэгээр нэмэгдүүл.
+// 4. 2 дахь тоог тэгтэй тэнцүү эсэхийг шалгаад, хэрэв тэгтэй тэнцүү бол тоолуурын утгыг нэгээр нэмэгдүүл.
+// 5. 3 дахь тоог тэгтэй тэнцүү эсэхийг шалгаад, хэрэв тэгтэй тэнцүү бол тоолуурын утгыг нэгээр нэмэгдүүл.
+// 6. Тоолуурын утгыг буцаа.
+
+// function countZero(a,b,c){
+//     let counter = 0;
+//     if(a === 0){
+//         counter++;
+//     }
+//     if(b === 0){
+//         counter++;
+//     }
+//     if(c === 0){
+//         counter++;
+//     }
+
+//     return counter;
+// }
+
+
+// Оролт: 5, 3
+// Гаралт: 125
+
+// Оролт: 9, 3
+// Гаралт: 729
+
+// function countDigit(a){
+//     return a.toString().length;
+// }
+
+// function sumD(num){
+//     let sum = 0;
+//     for(let i = 0; i < num.toString().length; i++){
+//         sum += +num.toString()[i]
+//     }
+
+//     return sum;
+// }
+
+// let nas = 15;
+// if(nas < 18) {
+//     console.log('yaaaay')
+// }
+
+// function isPalindrom(num){
+//     return num === +num.toString().split("").reverse().join("");
+// }
+
+// function isPrime(num){
+//     let counter = 0;
+//     for(let i = 1; i <= num; i++){
+//         if(num%i === 0){
+//             counter++;
+//         }
+//     }
+
+//     if(counter === 1 || counter === 2){
+//         return true
+//     }
+
+//     return false;
+// }
+
+// Callstack - нэг функцийг, өөр функц дотор дуудах
+// Callback - аргумент хэлбэрээр функц дамжуулах
+// Recursion - функцийг өөрийг нь дотор нь дуудах
+
+// function printName(ner){
+//     return ner;
+// }
+
+// function intro(ner){
+//     return "Сайн байна уу... Намайг " + printName(ner) + " гэдэг..."
+// }
+
+// function intro(nas){
+//     return "Би " + nas() + " настай"
+// }
+
+// function printHi(num){
+//     if(num === 0) return;
+//     console.log("Hi");
+//     printHi(num - 1);
+// }
+ 
+function addUpTo(num){
+    if(num === 0) {
+        return num;
+    };
+    return num + addUpTo(num - 1)
 }
 
-for(let i = 0; i < bat.tootsoo.length; i++){
-    let percentage = 0;
-    if(bat.tootsoo[i] <= 50){
-        percentage = .2;
-        bat.tip.push(bat.tootsoo[i] * percentage)
-    } else if(bat.tootsoo[i] > 50 && bat.tootsoo[i] < 200){
-        percentage = .15;
-        bat.tip.push(bat.tootsoo[i] * percentage)
-    } else {
-        percentage = .1;
-        bat.tip.push(bat.tootsoo[i] * percentage)
-    }
-}
+// 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 + 0
+// factorial - 1 * 2 * 3 * 4 * 5 = 5!
