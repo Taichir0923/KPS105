@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+}
+
+.wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.wrap .box {
+    height: 70%;
+    width: 70px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: ease-in-out .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    color: white;
+    gap: 1rem;
+}
+
+.wrap .box .circle {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.wrap .box .def {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.wrap .box .def.se {
+    animation: second 1s linear infinite;
+}
+
+.wrap .box .def .dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+
+.wrap .box:nth-child(1) {
+    background-color: #778beb;
+}
+
+.wrap .box:nth-child(2) {
+    background-color: #e66767;
+}
+
+.wrap .box:nth-child(3) {
+    background-color: #f5cd79;
+    position: relative;
+}
+
+.wrap .box .buttons {
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    width: max-content;
+    transform: translateX(-50%);
+}
+
+.wrap .box .buttons button {
+    padding: 1rem 2rem;
+    background-color: white;
+    border-radius: 9999px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.wrap .box:nth-child(4) {
+    background-color: #636e72;
+}
+
+.wrap .box:nth-child(5) {
+    background-color: #55efc4;
+}
+
+.active {
+    width: 800px !important;
+}
+
+@keyframes second {
+    0%, 40%, 70%, 100% {
+        opacity: 1;
+    }
+    45% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+}

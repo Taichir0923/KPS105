@@ -611,27 +611,27 @@
 // 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 + 0
 // factorial - 1 * 2 * 3 * 4 * 5 = 5!
 
-function add1(num){
-    let sum = 0;
+// function add1(num){
+//     let sum = 0;
 
-    for(let i = 1; i <= num; i++){
-        sum += i;
-    }
+//     for(let i = 1; i <= num; i++){
+//         sum += i;
+//     }
 
-    return sum;
-}
+//     return sum;
+// }
 
-function countTrue(arr){
-    let counter = 0;
+// function countTrue(arr){
+//     let counter = 0;
 
-    for(let i = 0; i < arr.length; i++){
-        if(arr[i] === true){
-            counter++;
-        }
-    }
+//     for(let i = 0; i < arr.length; i++){
+//         if(arr[i] === true){
+//             counter++;
+//         }
+//     }
 
-    return counter;
-}
+//     return counter;
+// }
 
 
 // for in
@@ -648,28 +648,28 @@ function countTrue(arr){
 //     console.log(obj[pro])
 // }
 
-function keysAndVal(obj){
-    let keys = [];
-    let vals = [];
-    for(let pro in obj){
-        keys.push(pro);
-        vals.push(obj[pro])
-    }
+// function keysAndVal(obj){
+//     let keys = [];
+//     let vals = [];
+//     for(let pro in obj){
+//         keys.push(pro);
+//         vals.push(obj[pro])
+//     }
 
-    return [keys, vals];
-}
+//     return [keys, vals];
+// }
 
-function createArr(first, len){
-    let result = [];
+// function createArr(first, len){
+//     let result = [];
 
-    for(let i = 1; i <= len; i++){
-        result.push(first * i)
-    }
+//     for(let i = 1; i <= len; i++){
+//         result.push(first * i)
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-// ... - rest operator
+// // ... - rest operator
 
 // let mass = [45, 65, 32, 148, 12, 59];
 
@@ -681,129 +681,223 @@ function createArr(first, len){
 //     return arguments;
 // }
 
-function calculateVols(...box){
-    const boxes = box;
-    let sum = 0;
+// function calculateVols(...box){
+//     const boxes = box;
+//     let sum = 0;
 
+//     for(let i = 0; i < boxes.length; i++){
+//         sum += calcHelp(boxes[i])
+//     }
+
+//     return sum;
+// }
+
+// function calcHelp(arr){
+//     let volume = 1;
+//     if(arr.length !== 0){
+//         for(let i = 0; i < arr.length; i++){
+//             volume *= arr[i];
+//         }
+//     } else {
+//         volume = 0;
+//     }
+//     return volume
+// }
+
+// // [], [], []
+// // let gg = [[], [], []]  
+// // gg[1] = [5, 6, 7, 8];
+// // gg[1][3]
+
+// function ex7(arr){
+//     let result = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         result += arr[i]*i
+//     }
+//     return result
+// }
+
+// function ex8(arr){
+//     let tegsh = [];
+//     let sondgoi = [];
+//     let isEven = true;
+//     let isOdd = true;
+//     for(let i = 0; i < arr.length; i++){
+//         if(i%2 === 0){
+//             tegsh.push(arr[i])
+//         } else {
+//             sondgoi.push(arr[i])
+//         }
+//     }
+
+//     for(let j = 0; j < tegsh.length; j++){
+//         if(tegsh[j]%2 === 1){
+//             isEven = false;
+//         }
+//     }
+
+//     for(let k = 0; k < sondgoi.length; k++){
+//         if(sondgoi[k]%2 === 0){
+//             isOdd = false;
+//         }
+//     }
+
+//     if(isEven && isOdd){
+//         return true;
+//     }
+
+//     return false;
+// }
+
+// function ex9(arr){
+//     let sum = 0;
+
+//     for(let i = 0; i < arr.length; i++){
+//         if(typeof arr[i] === 'number'){
+//             sum += arr[i]
+//         }
+//     }
+
+//     return sum;
+// }
+
+// function ex10(arr){
+//     let result = '';
+//     let last = arr[arr.length - 1];
+//     for(let i = 0; i < arr.length - 1; i++){
+//         result += arr[i]
+//     }
+
+//     if(typeof last === 'number'){
+//         last = last.toString();
+//     }
+//     if(result === last){
+//         return true;
+//     }
+
+//     return false;
+// }
+
+// function ex11(num){
+//     let too = num;
+//     if(typeof too === "number"){
+//         too = too.toString();
+//     }
+
+//     const greaterEven = "Тэгш цифрүүдийн нийлбэр нь их"
+//     const greaterOdd = "Сондгой цифрүүдийн нийлбэр нь их"
+//     const equal = "Тэнцүү"
+
+//     let sumEven = 0;
+//     let sumOdd = 0;
+
+//     for(let i = 0; i < too.length; i++){
+//         if(too[i]%2 === 0){
+//             sumEven += +too[i]
+//         } else {
+//             sumOdd += +too[i]
+//         }
+//     }
+
+//     if(sumEven > sumOdd){
+//         return greaterEven
+//     } else if (sumEven < sumOdd){
+//         return greaterOdd
+//     } else {
+//         return equal
+//     }
+// }
+
+// DOM - Document Oriented Model
+
+// const title = document.querySelectorAll(".text");
+// const second = document.getElementById('second');
+// const paragraphs = document.getElementsByClassName("text")
+
+// function changeStyle(){
+//     title[0].classList.toggle("update--" + i);
+// }
+
+// getElementsByClassName("classNer") => []
+// getElementById("id") - Dom element
+
+// let x = 5;
+// console.log(`number is ${x}`)
+
+const boxes = document.querySelectorAll('.box');
+const tsag = document.querySelector("#tsag")
+const minut = document.querySelector("#minut")
+const secund = document.querySelector("#secund")
+const dooli = document.querySelector("#dooli")
+const ehleh = document.querySelector("#ehleh")
+const zogsoh = document.querySelector("#zogsoh")
+
+for(let i = 0; i < boxes.length; i++){
+    boxes[i].onclick = function(){
+        removeActive();
+        boxes[i].classList.add('active')
+    }
+}
+// Hoisting
+function removeActive(){
     for(let i = 0; i < boxes.length; i++){
-        sum += calcHelp(boxes[i])
-    }
-
-    return sum;
-}
-
-function calcHelp(arr){
-    let volume = 1;
-    if(arr.length !== 0){
-        for(let i = 0; i < arr.length; i++){
-            volume *= arr[i];
-        }
-    } else {
-        volume = 0;
-    }
-    return volume
-}
-
-// [], [], []
-// let gg = [[], [], []]  
-// gg[1] = [5, 6, 7, 8];
-// gg[1][3]
-
-function ex7(arr){
-    let result = 0;
-    for(let i = 0; i < arr.length; i++){
-        result += arr[i]*i
-    }
-    return result
-}
-
-function ex8(arr){
-    let tegsh = [];
-    let sondgoi = [];
-    let isEven = true;
-    let isOdd = true;
-    for(let i = 0; i < arr.length; i++){
-        if(i%2 === 0){
-            tegsh.push(arr[i])
-        } else {
-            sondgoi.push(arr[i])
-        }
-    }
-
-    for(let j = 0; j < tegsh.length; j++){
-        if(tegsh[j]%2 === 1){
-            isEven = false;
-        }
-    }
-
-    for(let k = 0; k < sondgoi.length; k++){
-        if(sondgoi[k]%2 === 0){
-            isOdd = false;
-        }
-    }
-
-    if(isEven && isOdd){
-        return true;
-    }
-
-    return false;
-}
-
-function ex9(arr){
-    let sum = 0;
-
-    for(let i = 0; i < arr.length; i++){
-        if(typeof arr[i] === 'number'){
-            sum += arr[i]
-        }
-    }
-
-    return sum;
-}
-
-function ex10(arr){
-    let result = '';
-    let last = arr[arr.length - 1];
-    for(let i = 0; i < arr.length - 1; i++){
-        result += arr[i]
-    }
-
-    if(typeof last === 'number'){
-        last = last.toString();
-    }
-    if(result === last){
-        return true;
-    }
-
-    return false;
-}
-
-function ex11(num){
-    let too = num;
-    if(typeof too === "number"){
-        too = too.toString();
-    }
-
-    const greaterEven = "Тэгш цифрүүдийн нийлбэр нь их"
-    const greaterOdd = "Сондгой цифрүүдийн нийлбэр нь их"
-    const equal = "Тэнцүү"
-
-    let sumEven = 0;
-    let sumOdd = 0;
-
-    for(let i = 0; i < too.length; i++){
-        if(too[i]%2 === 0){
-            sumEven += +too[i]
-        } else {
-            sumOdd += +too[i]
-        }
-    }
-
-    if(sumEven > sumOdd){
-        return greaterEven
-    } else if (sumEven < sumOdd){
-        return greaterOdd
-    } else {
-        return equal
+        boxes[i].classList.remove('active')
     }
 }
+// tag.onclick = function(){}
+let doli = 0;
+let second = 0;
+let minute = 0;
+let hour = 0;
+
+let stopW;
+
+function updateUI(){
+    tsag.innerText = hour;
+    minut.innerText = minute;
+    secund.innerText = second;
+    dooli.innerText = doli;
+}
+// = setInterval(stopWatch, 10)
+// callback, hugatsaa
+function stopWatch(){
+    tsag.innerText = hour;
+    minut.innerText = minute;
+    secund.innerText = second;
+    dooli.innerText = doli;
+    doli++;
+    if(doli === 100){
+        doli = 0;
+        second++;
+    }
+    if(second === 60){
+        second = 0;
+        minute++
+    }
+
+    if(minute === 60){
+        minute = 0
+        hour++
+    }
+}
+
+
+
+ehleh.onclick = function(){
+    stopW = setInterval(stopWatch, 10)
+}
+
+zogsoh.onclick = function(){
+    clearInterval(stopW);
+    minute = 0;
+    hour = 0;
+    second = 0;
+    doli = 0;
+    updateUI();
+}
+// callstack
+// callback
+// recursion
+
+
+// Гэрийн даалгаварт тооны машин хийх
