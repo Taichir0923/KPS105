@@ -5,7 +5,32 @@ const input = document.querySelector('#input');
 const nums = document.querySelectorAll('.num')
 
 function number(number) {
-    input.value += number;
+    if (input.value[input.value.length - 1] === number && (number === '+' || number === '-' || number === '*' || number === '/' || number === '.')) {
+        input.value = input.value.slice(0, -1);
+        input.value += number
+    } else if(
+        (number === '+' && (
+        input.value[input.value.length - 1] === '-' ||
+        input.value[input.value.length - 1] === '*' ||
+        input.value[input.value.length - 1] === '/' )) ||
+        (number === '-' && (
+        input.value[input.value.length - 1] === '+' ||
+        input.value[input.value.length - 1] === '*' ||
+        input.value[input.value.length - 1] === '/' )) ||
+        (number === '*' && (
+        input.value[input.value.length - 1] === '-' ||
+        input.value[input.value.length - 1] === '+' ||
+        input.value[input.value.length - 1] === '/' )) ||
+        (number === '/' && (
+        input.value[input.value.length - 1] === '-' ||
+        input.value[input.value.length - 1] === '*' ||
+        input.value[input.value.length - 1] === '+' ))
+    ){
+        input.value = input.value.slice(0, -1);
+        input.value += number
+    } else {
+        input.value += number;
+    }
 }
 
 function calculate() {
@@ -24,7 +49,7 @@ for (let i = 0; i < nums.length; i++) {
             number(nums[i].innerText)
         }
     } else {
-        nums[i].onclick = function(){
+        nums[i].onclick = function () {
             calculate()
         }
     }
