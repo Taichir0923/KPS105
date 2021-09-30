@@ -2,7 +2,9 @@
 
 // } // ES6
 const input = document.querySelector('#input');
-const nums = document.querySelectorAll('.num')
+const nums = document.querySelectorAll('.num');
+
+let isPressed = false;
 
 function number(number) {
     if (input.value[input.value.length - 1] === number && (number === '+' || number === '-' || number === '*' || number === '/' || number === '.')) {
@@ -29,7 +31,18 @@ function number(number) {
         input.value = input.value.slice(0, -1);
         input.value += number
     } else {
-        input.value += number;
+        if(!isPressed){
+            input.value += number;
+        } else {
+            if(number === '+' || number === '-' || number === '*' || number === '/'){
+                isPressed = false;
+                input.value += number;
+            } else {
+                input.value = '';
+                isPressed = false;
+                input.value += number;
+            }
+        }
     }
 }
 
@@ -50,7 +63,8 @@ for (let i = 0; i < nums.length; i++) {
         }
     } else {
         nums[i].onclick = function () {
-            calculate()
+            calculate();
+            isPressed = true;
         }
     }
 }
