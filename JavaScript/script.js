@@ -824,77 +824,77 @@
 // let x = 5;
 // console.log(`number is ${x}`)
 
-const boxes = document.querySelectorAll('.box');
-const tsag = document.querySelector("#tsag")
-const minut = document.querySelector("#minut")
-const secund = document.querySelector("#secund")
-const dooli = document.querySelector("#dooli")
-const ehleh = document.querySelector("#ehleh")
-const zogsoh = document.querySelector("#zogsoh")
+// const boxes = document.querySelectorAll('.box');
+// const tsag = document.querySelector("#tsag")
+// const minut = document.querySelector("#minut")
+// const secund = document.querySelector("#secund")
+// const dooli = document.querySelector("#dooli")
+// const ehleh = document.querySelector("#ehleh")
+// const zogsoh = document.querySelector("#zogsoh")
 
-for(let i = 0; i < boxes.length; i++){
-    boxes[i].onclick = function(){
-        removeActive();
-        boxes[i].classList.add('active')
-    }
-}
-// Hoisting
-function removeActive(){
-    for(let i = 0; i < boxes.length; i++){
-        boxes[i].classList.remove('active')
-    }
-}
-// tag.onclick = function(){}
-let doli = 0;
-let second = 0;
-let minute = 0;
-let hour = 0;
+// for(let i = 0; i < boxes.length; i++){
+//     boxes[i].onclick = function(){
+//         removeActive();
+//         boxes[i].classList.add('active')
+//     }
+// }
+// // Hoisting
+// function removeActive(){
+//     for(let i = 0; i < boxes.length; i++){
+//         boxes[i].classList.remove('active')
+//     }
+// }
+// // tag.onclick = function(){}
+// let doli = 0;
+// let second = 0;
+// let minute = 0;
+// let hour = 0;
 
-let stopW;
+// let stopW;
 
-function updateUI(){
-    tsag.innerText = hour;
-    minut.innerText = minute;
-    secund.innerText = second;
-    dooli.innerText = doli;
-}
-// = setInterval(stopWatch, 10)
-// callback, hugatsaa
-function stopWatch(){
-    tsag.innerText = hour;
-    minut.innerText = minute;
-    secund.innerText = second;
-    dooli.innerText = doli;
-    doli++;
-    if(doli === 100){
-        doli = 0;
-        second++;
-    }
-    if(second === 60){
-        second = 0;
-        minute++
-    }
+// function updateUI(){
+//     tsag.innerText = hour;
+//     minut.innerText = minute;
+//     secund.innerText = second;
+//     dooli.innerText = doli;
+// }
+// // = setInterval(stopWatch, 10)
+// // callback, hugatsaa
+// function stopWatch(){
+//     tsag.innerText = hour;
+//     minut.innerText = minute;
+//     secund.innerText = second;
+//     dooli.innerText = doli;
+//     doli++;
+//     if(doli === 100){
+//         doli = 0;
+//         second++;
+//     }
+//     if(second === 60){
+//         second = 0;
+//         minute++
+//     }
 
-    if(minute === 60){
-        minute = 0
-        hour++
-    }
-}
+//     if(minute === 60){
+//         minute = 0
+//         hour++
+//     }
+// }
 
 
 
-ehleh.onclick = function(){
-    stopW = setInterval(stopWatch, 10)
-}
+// ehleh.onclick = function(){
+//     stopW = setInterval(stopWatch, 10)
+// }
 
-zogsoh.onclick = function(){
-    clearInterval(stopW);
-    minute = 0;
-    hour = 0;
-    second = 0;
-    doli = 0;
-    updateUI();
-}
+// zogsoh.onclick = function(){
+//     clearInterval(stopW);
+//     minute = 0;
+//     hour = 0;
+//     second = 0;
+//     doli = 0;
+//     updateUI();
+// }
 // callstack
 // callback
 // recursion
